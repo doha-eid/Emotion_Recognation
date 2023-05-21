@@ -1,0 +1,142 @@
+Cross validation Function (evaluate_cv_model):
+* Arguments: 
+* model (an object from the classifier)
+* data
+* target
+* kFolds
+* Return:
+* accuracy (accuracy of the model)
+* Description: 
+      Train the given model using the required number of Folds and calculate the accuracy.
+Confusion Matrix & Classification Report Function (plot_confusionMatrix):
+* Arguments: 
+* clf (an object from the classifier)
+* y_test (testing targets)
+* X_test (testing data)
+* Return:
+* report (Classification Report)
+* Description: 
+This function can be used to plot the confusion matrix of the model and returns the classification report.
+KNN Function:
+* Arguments: 
+* X_train (training data)
+* y_train (training tragets)
+* X_test (testing data)
+* y_test (testing targets)
+* num_neighbors (number of neighbors parameter)
+* Return:
+* test_accuracy (accuracy of the testing data)
+* train_accuracy (accuracy of the training data)
+* prediction (values of prediction by the model)
+* KNN (object from the classifier)
+* Description: 
+Create the model by taking an object from KNeighborsClassifier with the required number of neighbors, then train the model using the training data and targets, then calculate the accuracy of both the training and testing, then get the predicted values of the testing data using the model.
+Finally return the needed value.
+SVM Function:
+* Arguments: 
+* X_train (training data)
+* y_train (training tragets)
+* X_test (testing data)
+* y_test (testing targets)
+* kernel (the type of the kernel)
+* Return:
+* test_accuracy (accuracy of the testing data)
+* train_accuracy (accuracy of the training data)
+* prediction (values of prediction by the model)
+* SVM (object from the classifier)
+* Description: 
+Create the model by taking an object from svm.SVC with the required kernel and using function shape "ovo" to be used for multiclass classification, then train the model using the training data and targets, then calculate the accuracy of both the training and testing, then get the predicted values of the testing data using the model.
+Finally return the needed values.
+
+Logisitc_Regression Function:
+* Arguments: 
+* X_train (training data)
+* y_train (training tragets)
+* X_test (testing data)
+* y_test (testing targets)
+* Return:
+* test_accuracy (accuracy of the testing data)
+* train_accuracy (accuracy of the training data)
+* prediction (values of prediction by the model)
+* log_reg (object from the classifier)
+* Description: 
+Create the model by taking an object from LogisticRegression with "multinomial" multi_class parameter and "lbfgs" solver parameter, then train the model using the training data and targets, then calculate the accuracy of both the training and testing, then get the predicted values of the testing data using the model.
+Finally return the needed values.
+
+
+
+
+Data section:
+> Read ECG, EEG, EEG+EEG selected features files in 3 data frames.
+> Drop the unnecessary columns from each dataframe.
+> Specify the data and target for each dataframe.
+> Get number of Kfolds to be used for cross validation.
+> Split the data using train_test_split().
+
+KNN model section:
+* EEG Data
+> Training multiple models with different number of neighbors and visualizing the output and then choose the best k value.
+> Evaluate the model without cross validation using the KNN function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+* ECG Data
+> Training multiple models with different number of neighbors and visualizing the output and then choose the best k value.
+> Evaluate the model without cross validation using the KNN function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+* ECG + EEG Data
+> Training multiple models with different number of neighbors and visualizing the output and then choose the best k value.
+> Evaluate the model without cross validation using the KNN function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+SVM models section:
+* EEG Data (for each kernel type we make the same steps)
+> Train the SVM model with the required kernel type using SVM function.
+> Evaluate the model without cross validation using the SVM function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+* ECG Data (for each kernel type we make the same steps)
+> Train the SVM model with the required kernel type using SVM function.
+> Evaluate the model without cross validation using the SVM function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+* ECG + EEG Data (for each kernel type we make the same steps)
+> Train the SVM model with the required kernel type using SVM function.
+> Evaluate the model without cross validation using the SVM function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+Logistic Regression model section:
+* EEG Data
+> Train the model using Logistic_Regression function.
+> Evaluate the model without cross validation using the Logistic_Regression function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+* ECG Data
+> Train the model using Logistic_Regression function.
+> Evaluate the model without cross validation using the Logistic_Regression function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+* ECG + EEG Data
+> Train the model using Logistic_Regression function.
+> Evaluate the model without cross validation using the Logistic_Regression function and print the test and train accuracy.
+> Evaluate the model with cross validation using evaluate_cv_model function and print the accuracy.
+> Plot confusion matrix using plot_confussionMatrix function.
+> Display classification report returned from plot_confussionMatrix function.
+
+
