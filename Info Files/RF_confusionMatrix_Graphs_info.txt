@@ -1,0 +1,47 @@
+Random Forest Section:
+1- train_randomForest():
+1- Arguments: x_train (X data for training set), y_train (the target of the training set), x_test (X data for testing set ), y_test (the target of the testing set), n_ofTrees (No of trees needed in the model)
+2- Description: This function can be used to train random forest classifier with no of trees needed and prints the accuracy of the trained model.
+Cross validation Section:
+1- evaluate_cv_model():
+1- Arguments: model (object from the classifier of the model), x_train (X data for training set), y_train (the target of the training set), kFolds (no of folds needed).
+2- Description: This function can be used to apply cross validation on the classifier passed as an argument and returns the accuracy.
+Confusion Matrix & Classification Report:
+1- plot_confussionMatrix():
+1- Arguments: clf (object from the classifier of the model), y_test (target data for testing set), X_test (the data of the testing set), st (a string add to the title of the plot).
+2- Description: This function can be used to plot the confusion matrix of the model and returns the classification report.
+ECG Data section:
+1- Read ECG selected features data frame and specify the target column.
+2- Split the data using train_test_split().
+3- Train the model using train_randomForest().
+4- Evaluate the model using cross-validation using evaluate_cv_model().
+5- Plot confusion matrix using plot_confussionMatrix().
+6- Display classification report returned from plot_confussionMatrix(). 
+EEG Data section:
+1- Read EEG selected features data frame and specify the target column.
+2- Split the data using train_test_split().
+3- Train the model using train_randomForest().
+4- Evaluate the model using cross-validation using evaluate_cv_model().
+5- Plot confusion matrix using plot_confussionMatrix().
+6- Display classification report returned from plot_confussionMatrix(). 
+ECG + EEG Data section:
+1- Read EEG + ECG selected features data frame and specify the target column.
+2- Split the data using train_test_split().
+3- Train the model using train_randomForest().
+4- Evaluate the model using cross-validation using evaluate_cv_model().
+5- Plot confusion matrix using plot_confussionMatrix().
+6- Display classification report returned from plot_confussionMatrix().
+Graph Accuracies section:
+1- graph_accuracy():
+1- Arguments: values_w (List of the accuracies of the models with cross-validation), values_wo (List of the accuracies of the models without cross-validation), st (a string add to the title of the plot).
+2- Description: This function can be used to plot the accuracies of the model used and differentiate between the accuracies before and after the cross validation in 3d bar chart.
+Graph EEG Accuracies:
+1- Create two lists one is for the accuracies of the models trained on EEG selected features before cross-validation and the second one is for the accuracies after cross-validation.
+2- Graph the accuracies using graph_accuracy().
+Graph ECG Accuracies:
+1- Create two lists one is for the accuracies of the models trained on ECG selected features before cross-validation and the second one is for the accuracies after cross-validation.
+2- Graph the accuracies using graph_accuracy().
+Graph EEG + ECG Accuracies:
+1- Create two lists one is for the accuracies of the models trained on ECG selected features before cross-validation and the second one is for the accuracies after cross-validation.
+2- Graph the accuracies using graph_accuracy().
+
